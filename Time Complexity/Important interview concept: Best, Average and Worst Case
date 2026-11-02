@@ -1,0 +1,22 @@
+Important interview concept: Best, Average and Worst Case
+                                
+                                 int[] arr = {10, 20, 30, 40, 50};
+                                
+                                int target = 10;
+                                
+                                for (int i = 0; i < arr.length; i++) {
+                                
+                                    if (arr[i] == target) {
+                                        System.out.println("Found");
+                                        break;
+                                    }
+                                }
+                                
+                                
+                                Case	Situation	Complexity
+                                Best	Element at first position	O(1)
+                                Average	Element around middle	O(n)
+                                Worst	Element at last position or absent	O(n)
+                                
+                                Interview point: Big O generally describes the upper-bound growth of an algorithm,
+                                    commonly used to express worst-case complexity.
