@@ -1,0 +1,29 @@
+
+`````````O(n²) – Quadratic Time--->>
+
+                  public class Main {
+                  
+                      public static void main(String[] args) {
+                  
+                          int[] arr = {10, 20, 30, 40};
+                  
+                          for (int i = 0; i < arr.length; i++) {
+                  
+                              for (int j = 0; j < arr.length; j++) {
+                  
+                                  System.out.println(arr[i] + " " + arr[j]);
+                              }
+                          }
+                      }
+                  }
+    =======================================================================================
+                            
+                            Explanation:
+                            - Outer loop executes n times.
+                            - Inner loop executes n times for every outer iteration.
+                            - Total operations = n × n = n².
+                            For 4 elements: 16 iterations.
+                            
+                            For 100 elements: 10,000 iterations.
+                            
+                            Time Complexity: O(n²)
