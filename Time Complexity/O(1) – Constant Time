@@ -7,3 +7,7 @@ public class Main {
     }
 }
 o/p-30
+
+- We access only one array index.
+- Whether the array contains 5 or 5 lakh elements, accessing an element by index takes constant time.
+Time Complexity: O(1)
