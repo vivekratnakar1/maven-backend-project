@@ -1,0 +1,62 @@
+                                          Example: Merge Sort.
+                                          
+                                          Merge Sort divides an array into smaller parts and merges them in sorted order.
+                                          import java.util.Arrays;
+                                          
+                                          public class Main {
+                                          
+                                              static void mergeSort(int[] arr) {
+                                          
+                                                  if (arr.length <= 1) {
+                                                      return;
+                                                  }
+                                          
+                                                  int mid = arr.length / 2;
+                                          
+                                                  int[] left = Arrays.copyOfRange(arr, 0, mid);
+                                                  int[] right = Arrays.copyOfRange(arr, mid, arr.length);
+                                          
+                                                  mergeSort(left);
+                                                  mergeSort(right);
+                                          
+                                                  merge(arr, left, right);
+                                              }
+                                          
+                                              static void merge(int[] arr, int[] left, int[] right) {
+                                          
+                                                  int i = 0, j = 0, k = 0;
+                                          
+                                                  while (i < left.length && j < right.length) {
+                                          
+                                                      if (left[i] <= right[j]) {
+                                                          arr[k++] = left[i++];
+                                                      } else {
+                                                          arr[k++] = right[j++];
+                                                      }
+                                                  }
+                                          
+                                                  while (i < left.length) {
+                                                      arr[k++] = left[i++];
+                                                  }
+                                          
+                                                  while (j < right.length) {
+                                                      arr[k++] = right[j++];
+                                                  }
+                                              }
+                                          
+                                              public static void main(String[] args) {
+                                          
+                                                  int[] arr = {50, 20, 40, 10, 30};
+                                          
+                                                  mergeSort(arr);
+                                          
+                                                  System.out.println(Arrays.toString(arr));
+                                              }
+                                          }
+                                          
+                                          
+                                          Output:
+                                          [10, 20, 30, 40, 50]
+                                          
+                                          
+                                          Time Complexity: O(n log n) in best, average and worst cases.
