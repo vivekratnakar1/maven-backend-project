@@ -10,3 +10,10 @@ public class Main {
     }
 }
 o/p-{10, 20, 30, 40, 50}
+
+
+Explanation:
+- Loop executes n times.
+- If array size is 5, loop runs 5 times.
+- If array size is 100, loop runs 100 times.
+Time Complexity: O(n)
